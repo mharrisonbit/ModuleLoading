@@ -1,10 +1,9 @@
-﻿using System;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Navigation;
 
 namespace ListDisplayModule.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -25,26 +24,6 @@ namespace ListDisplayModule.ViewModels
         {
             get { return _IsBusy; }
             set { SetProperty(ref _IsBusy, value); }
-        }
-
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatingTo(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void Destroy()
-        {
-
         }
     }
 }

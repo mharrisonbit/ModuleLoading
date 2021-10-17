@@ -1,9 +1,9 @@
-﻿using ModuleLoading.ViewModels;
+﻿using ListDisplayModule;
+using ModuleLoading.ViewModels;
 using ModuleLoading.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Xamarin.Forms;
-using ListDisplayModule;
 
 namespace ModuleLoading
 {
@@ -17,7 +17,7 @@ namespace ModuleLoading
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainView");
+            var result = await NavigationService.NavigateAsync("/NavigationPage/MainView");
 
             if (!result.Success)
             {

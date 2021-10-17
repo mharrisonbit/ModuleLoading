@@ -11,11 +11,27 @@
        <Grid.RowDefinitions>
            <RowDefinition Height="50"/>
            <RowDefinition Height="50"/>
+           <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
        <Label Text="This is the page form the module"
               Grid.Row="0"/>
        <Button Text="Go home"
                Grid.Row="1"
                Command="{Binding GoBackBtn}"/>
+        <CollectionView Grid.Row="2"
+                        ItemsSource="{Binding MerchantCollection}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="Auto, 50">
+                        <Label Grid.Row="0"
+                               Text="{Binding Name}"
+                               FontAttributes="Bold" />
+                        <Label Text="{Binding Latitude}"
+                               Grid.Row="1"
+                               FontAttributes="Bold" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid> 
 </ContentPage>

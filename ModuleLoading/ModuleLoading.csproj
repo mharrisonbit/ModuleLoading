@@ -14,18 +14,26 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Prism.Forms" />
     <None Remove="Prism.DryIoc.Forms" />
     <None Remove="Views\" />
     <None Remove="ViewModels\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="JsonFiles\" />
+    <None Remove="JsonFiles\Short_json_test.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="JsonFiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ListDisplayModule\ListDisplayModule.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JsonFiles\Short_json_test.txt" />
   </ItemGroup>
 </Project>

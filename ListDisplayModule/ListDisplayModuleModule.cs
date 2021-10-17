@@ -1,5 +1,7 @@
-﻿using System;
-using ListDisplayModule.ViewModels;
+﻿using ListDisplayModule.ViewModels;
+using ListDisplayModule.Views;
+using Prism.Ioc;
+using Prism.Modularity;
 
 namespace ListDisplayModule
 {
